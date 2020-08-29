@@ -15,6 +15,9 @@ fname <- sprintf("~/rpi_camera_uploader/photos/garage_%s.jpg", curtime)
 ##------------------------------------------------------------------------------
 
 ## Create command to take picture, then take picture
+## For all flag options see:
+## https://www.raspberrypi.org/documentation/raspbian/applications/camera.md
+## note add `disable_camera_led=1` to /boot/config.txt to control led
 cmd1 <- paste0("raspistill ",
                "-rot 90 ",    ## rotate 0/90/180/270 degrees
                "-o ",  fname) ## output to filename
